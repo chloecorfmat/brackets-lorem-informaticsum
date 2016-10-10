@@ -54,45 +54,48 @@ define(function (require, exports, module) {
     var _allSizes = [ SIZE_SHORT, SIZE_MEDIUM, SIZE_LONG, SIZE_VERY_LONG ];
     
     var _shortWords     = [ // Words with less than four letters
-        "a", "ab", "ad", "an", "aut", "de", "do", "e", "ea", "est",
-        "et", "eu", "ex", "hic", "id", "iis", "in", "ita", "nam", "ne",
-        "non", "o", "qui", "quo", "se", "sed", "si", "te", "ubi", "ut"
+        "i", "as", "cd", "do", "ie", 
+        "if", "md", "or", "OS", "api", 
+        "bin", "bug", "CMS", "CSS", "div", 
+        "DOM", "for", "ftp", "ide", "inc", 
+        "log", "mvc", "PHP", "SQL", "svg", 
+        "url", "var", "W3C", "web", "XML"
     ];
     
     var _mediumWords    = [ // Words with four to six letters
-        "amet", "aliqua", "anim", "aute", "cillum", "culpa", "dolor",
-        "dolore", "duis", "elit", "enim", "eram", "esse", "fore",
-        "fugiat", "illum", "ipsum", "irure", "labore", "legam",
-        "lorem", "magna", "malis", "minim", "multos", "nisi",
-        "noster", "nulla", "quae", "quem", "quid", "quis", "quorum",
-        "sint", "summis", "sunt", "tamen", "varias", "velit", "veniam"
+        "a11y", "case", "conf", "echo", "else", 
+        "file", "font", "fork", "gulp", "HTML", 
+        "icon", "json", "main", "null", "SASS", 
+        "wiki", "xslt", "Adobe", "block", "cache", 
+        "class", "drush", "empty", "linux", "lorem", 
+        "model", "proxy", "scrum", "shell", "split", 
+        "while", "coding", "deploy", "drupal", "import", 
+        "kanban", "public", "random", "return", "static", 
+        "string", "switch", "update", "vendor"
     ];
     
     var _longWords      = [ // Words with seven to ten letters
-        "admodum", "aliquip", "appellat", "arbitror", "cernantur",
-        "commodo", "consequat", "cupidatat", "deserunt", "doctrina",
-        "eiusmod", "excepteur", "expetendis", "fabulas", "incididunt",
-        "incurreret", "ingeniis", "iudicem", "laboris", "laborum",
-        "litteris", "mandaremus", "mentitum", "nescius", "nostrud",
-        "occaecat", "officia", "offendit", "pariatur", "possumus",
-        "probant", "proident", "quamquam", "quibusdam", "senserit",
-        "singulis", "tempor", "ullamco", "vidisse", "voluptate"
+        "boucles", "browser", "commit", "console", "default", 
+        "desktop", "display", "foreach", "include", "library", 
+        "numbers", "scripts", "servers", "system", "theming", 
+        "varnish", "version", "comments", "computer", "database", 
+        "function", "keyboard", "networks", "projects", "template", 
+        "workflow", "camelcase", "checklist", "directory", "framework", 
+        "namespace", "softwares", "standards", "conditions", "extensions", 
+        "Javascript", "responsive", "spaghettis", "styleguide", "task-runner"
     ];
     
-    var _veryLongWords  = [ // Words with more than ten letters
-        "adipisicing", "arbitrantur", "cohaerescant", "comprehenderit",
-        "concursionibus", "coniunctione", "consectetur", "despicationes",
-        "distinguantur", "domesticarum", "efflorescere", "eruditionem",
-        "exquisitaque", "exercitation", "familiaritatem", "fidelissimae",
-        "firmissimum", "graviterque", "illustriora", "instituendarum",
-        "imitarentur", "philosophari", "praesentibus", "praetermissum",
-        "relinqueret", "reprehenderit", "sempiternum", "tractavissent",
-        "transferrem", "voluptatibus"
+    // 
+    
+    var _veryLongWords  = [ // Words with more than ten letters (11/30)
+        "conventions", "open source", "versionning", "stylesheets", "autocomplete", 
+        "mobile-first", "preprocessor", "accessibility", "documentation", "search-engine", 
+        "oriented-object"
     ];
     
     var _allWords = _shortWords.concat(_mediumWords, _longWords, _veryLongWords);
     
-    // Sentence fragment patterns, based off of randomly selected Latin phrases.
+    // Sentence fragment patterns, based off of randomly selected phrases.
     // Used to build all sentences and paragraphs.
     var _fragmentPatterns = [
         // Three words
