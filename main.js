@@ -33,7 +33,7 @@ define(function (require, exports, module) {
         EditorManager   = brackets.getModule("editor/EditorManager");
     
     // --- Extension modules ---
-    var LoremIpsum = require("LoremIpsum");
+    var LoremInformaticsum = require("LoremInformaticsum");
     
     // --- Helper functions ---
     function _getLoremCommand(editor) {
@@ -50,11 +50,11 @@ define(function (require, exports, module) {
         
         command = document.getRange({line: pos.line, ch: start}, {line: pos.line, ch: end});
         
-        if (command.match(/lorem/)) {
-            command = command.substring(command.match(/lorem/).index);
+        if (command.match(/informaticsum/)) {
+            command = command.substring(command.match(/informaticsum/).index);
         }
         
-        return ((command.split("_")[0] === "lorem") ? command : "");
+        return ((command.split("_")[0] === "informaticsum") ? command : "");
     }
     
     // --- Event handlers ---
@@ -69,7 +69,7 @@ define(function (require, exports, module) {
         if ((event.type === "keydown") && (event.keyCode === KeyEvent.DOM_VK_TAB)) {
             command = _getLoremCommand(editor);
             if (command) {
-                text    = LoremIpsum.parseCommand(command);
+                text    = LoremInformaticsum.parseCommand(command);
                 end     = editor.getCursorPos();
                 start   = {line: end.line, ch: end.ch - command.length};
                 editor.document.replaceRange(text, start, end);
