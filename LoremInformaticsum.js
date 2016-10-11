@@ -85,12 +85,13 @@ define(function (require, exports, module) {
         "Javascript", "responsive", "spaghettis", "styleguide", "task-runner"
     ];
     
-    // 
-    
-    var _veryLongWords  = [ // Words with more than ten letters (11/30)
-        "conventions", "open source", "versionning", "stylesheets", "autocomplete", 
-        "mobile-first", "preprocessor", "accessibility", "documentation", "search-engine", 
-        "oriented-object"
+    var _veryLongWords  = [ // Words with more than ten letters
+        "appearances", "autoloading", "collections", "conventions", "declaration", 
+        "developments", "downloading", "engineering", "environment", "open source", 
+        "placeholder", "server-side", "smartphones", "terminology", "versionning", 
+        "stylesheets", "applications", "autocomplete", "distribution", "mobile-first", 
+        "peer-to-peer", "preprocessor", "repositories", "accessibility", "compatibility", 
+        "configuration", "documentation", "search-engine", "call-to-action", "oriented-object"
     ];
     
     var _allWords = _shortWords.concat(_mediumWords, _longWords, _veryLongWords);
